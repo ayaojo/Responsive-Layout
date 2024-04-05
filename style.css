@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #080800;
+}
+
+/* отзывчивость: убираем слева-право padding, устанавливаем max-width и margin: 0 auto; */
+.container{
+    max-width: 1186px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 53px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.header-nav {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.header-nav a{
+    font-size: 14.4px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.header-contact .contact-num{
+    font-size: 14.4px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.welcome{
+    background-image: url(./images/welcome-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-container{
+    padding-top: 126px;
+    padding-bottom: 115px;
+}
+
+.welcome-container .title{
+    font-size: 54px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.welcome-container .subtitle{
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+}
+
+.technologies-container{
+    padding-top: 72px;
+    padding-bottom: 58px;  
+}
+
+.technologies-container .remember-text{
+    font-size: 12.6px;
+    font-weight: 800;
+    color:#A22F32;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.technologies-container .description{
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.cards-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cards-flex .card{
+    width: 31%;
+    border: 1px solid #F61067;
+    padding: 39px 36px 64px;
+    min-width: 362px;
+}
+
+.cards-flex .card .card-icon{
+    margin-bottom: 33px;
+}
+
+.cards-flex .card .card-title{
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+
+.cards-flex .card .card-description{
+    font-size: 16.2px;
+    font-weight: 400;
+}
+
+footer{
+    background-color: #080800;
+}
+
+.footer-container{
+    padding-top: 84px;
+    padding-bottom: 66px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer-right-licence{
+    color:  #FCFCFC;
+    font-size: 11.7px;
+}
+
+.social-media-icon{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.burger-menu{
+    display: none;
+}
+
+/* adaptive */
+@media screen and (max-width: 1146px) {
+    .cards-flex .card{
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .header-nav{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        margin-left: 89px;
+    }
+
+    .header-right{
+        display: flex;
+    }
+
+    .welcome-container{
+        text-align: center;
+    }
+
+    .technologies-container{
+        padding-top: 44px;
+        padding-bottom: 85px;
+    }
+} 
+
+@media screen and (max-width: 775px) {
+    .cards-flex .card{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-contact{
+        display: none;
+    }
+
+    .container{
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    .cards-flex .card{
+        min-width: auto;
+    }
+
+    .burger-menu{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
